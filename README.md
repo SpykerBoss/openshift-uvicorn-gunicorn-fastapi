@@ -1,4 +1,4 @@
-#O penshift Uvicorn Gunicorn Fastapi
+# Openshift Uvicorn Gunicorn Fastapi
 
 
 ## Prerequisite
