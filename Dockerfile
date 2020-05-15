@@ -1,6 +1,6 @@
 FROM python:3.6
 
-LABEL maintainer="Anton Pretorius (anton@saucecode.tech)"
+#LABEL maintainer="Anton Pretorius (anton@saucecode.tech)"
 
 COPY ./requirements.txt /requirements.txt
 
