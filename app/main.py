@@ -1,4 +1,5 @@
 import sys
+import random
 
 from fastapi import FastAPI
 
@@ -11,3 +12,13 @@ app = FastAPI()
 async def read_root():
     message = f"Hello world! From FastAPI running on Uvicorn with Gunicorn. Using Python {version} while openshift is doing its thing"
     return {"message": message}
+
+
+@app.get("/concurrency")
+async def test_concurrency():
+    range_for_request = random.randrange(20, 2000)
+    items = []
+    for i in range(2, range_for_request):
+        items.append(i)
+
+    return items
