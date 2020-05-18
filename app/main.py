@@ -32,3 +32,15 @@ def testing():
             items.append(i)
 
     return {"message": items}
+
+
+
+@app.get("/big-test")
+def big_test():
+    range_for_request = random.randrange(2, 2000000)
+    items = []
+    for i in range(1, range_for_request):
+        if (range_for_request % i) == 0:
+            items.append(i)
+
+    return { "message" : items }
