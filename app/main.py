@@ -18,7 +18,7 @@ async def test_concurrency():
     range_for_request = random.randrange(20, 2000)
     items = []
     for i in range(2, range_for_request):
-        if (i % range_for_request) == 0:
+        if (range_for_request % i) == 0:
             items.append(i)
 
     return items
@@ -28,7 +28,7 @@ def testing():
     range_for_request = random.randrange(20, 2000)
     items = []
     for i in range(2, range_for_request):
-        if (i % range_for_request) == 0:
+        if (range_for_request % i) == 0:
             items.append(i)
 
     return items
