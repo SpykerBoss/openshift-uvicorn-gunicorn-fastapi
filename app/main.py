@@ -21,7 +21,7 @@ async def test_concurrency():
         if (range_for_request % i) == 0:
             items.append(i)
 
-    return items
+    return {"message": items}
 
 @app.get("/testing")
 def testing():
@@ -31,4 +31,4 @@ def testing():
         if (range_for_request % i) == 0:
             items.append(i)
 
-    return items
+    return {"message": items}
