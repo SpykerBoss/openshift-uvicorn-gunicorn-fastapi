@@ -26,4 +26,4 @@ EXPOSE 8081
 # CMD ["/start.sh"]
 
 ENTRYPOINT ["python3"]
-CMD ["start.py"]
+CMD ["/app/start.py"]
